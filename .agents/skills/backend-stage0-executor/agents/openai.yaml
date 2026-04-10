@@ -1,4 +1,0 @@
-interface:
-  display_name: "Backend Stage 0 Executor"
-  short_description: "Execute the Genderize endpoint sprint"
-  default_prompt: "Use $backend-stage0-executor to build, validate, and deploy the Backend Wizards Stage 0 endpoint without drifting from the contract."

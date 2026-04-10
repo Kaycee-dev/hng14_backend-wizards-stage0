@@ -1,4 +1,0 @@
-interface:
-  display_name: "Backend Stage 0 Proof"
-  short_description: "Capture README and submission proof"
-  default_prompt: "Use $backend-stage0-proof to update README, evidence, submission notes, and live verification records for Backend Wizards Stage 0."
