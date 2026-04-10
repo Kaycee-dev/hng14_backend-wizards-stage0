@@ -1,0 +1,50 @@
+packet_id: bw0-integration-20260410-01
+day: Day 1-Day 2
+lane_type: integration
+objective: >
+  Ship a locally verifiable GET /api/classify endpoint that uses the real Genderize API and returns the graded contract.
+scope_in:
+  - endpoint handler
+  - upstream client
+  - response transform
+  - local tests for the endpoint
+scope_out:
+  - unrelated routes
+  - repo-wide rewrites
+repo_root: <target-repo-root>
+worktree:
+  path: <target-repo-root>
+  branch: main
+primary_surface: mixed
+required_reads:
+  - AGENTS.md
+  - backend-wizards-stage0-sprint_v1_0.md
+  - docs/backend-stage0-sprint/00_api_contract.md
+inputs:
+  - foundation lane route-ownership confirmation
+deliverables:
+  - live local endpoint
+  - verified transform logic
+  - error mapping
+verification:
+  commands:
+    - run the local test suite or targeted endpoint checks
+  manual_proofs:
+    - confirm success, no-prediction, and missing-name behaviors
+green_level: gate_green
+evidence_updates:
+  - docs/backend-stage0-sprint/07_progress_tracker.md
+  - docs/backend-stage0-sprint/08_evidence_log.md
+  - docs/backend-stage0-sprint/09_decisions_log.md
+  - docs/backend-stage0-proof/01_raw_journal/2026-04-10_day_1.md
+escalate_when:
+  - route ownership is unclear
+  - the framework cannot safely express the required contract
+closeout_contract:
+  must_report:
+    - summary
+    - files changed
+    - checks run
+    - blocker status
+    - next exact starting point
+    - next handoff point

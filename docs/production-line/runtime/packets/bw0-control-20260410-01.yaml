@@ -1,0 +1,40 @@
+packet_id: bw0-control-20260410-01
+day: Day 1
+lane_type: control
+objective: >
+  Keep the Stage 0 delivery state, gate timing, and handoff contract current throughout the rush window.
+scope_in:
+  - docs/agent-ops/06_delivery-state.md
+  - docs/production-line/runtime/lane-board.md
+scope_out:
+  - application code
+repo_root: <target-repo-root>
+worktree:
+  path: <target-repo-root>
+  branch: main
+primary_surface: mixed
+required_reads:
+  - AGENTS.md
+  - docs/agent-ops/04_deadline-overlay.md
+  - docs/agent-ops/06_delivery-state.md
+inputs:
+  - backend-wizards-stage0-sprint_v1_0.md
+deliverables:
+  - current delivery state
+  - current lane board
+verification:
+  commands:
+    - update the state after each substantive session
+  manual_proofs:
+    - next exact starting point is explicit
+green_level: lane_green
+evidence_updates:
+  - docs/agent-ops/06_delivery-state.md
+escalate_when:
+  - gate dates no longer match reality
+closeout_contract:
+  must_report:
+    - summary
+    - blocker status
+    - next exact starting point
+    - next handoff point

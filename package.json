@@ -1,0 +1,14 @@
+{
+  "name": "backend-wizards-stage0",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend Wizards Stage 0 Genderize API integration endpoint",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node local-server.js",
+    "start": "node local-server.js",
+    "test": "node test/classify.test.js"
+  }
+}

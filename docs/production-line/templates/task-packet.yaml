@@ -1,0 +1,41 @@
+packet_id: bw0-<lane>-<yyyymmdd>-<nn>
+day: <overlay day>
+lane_type: control | foundation | integration | hardening | deployment | proof
+objective: >
+  Replace this with the finished state.
+scope_in:
+  - <owned file/module/behavior>
+scope_out:
+  - <do not change without escalation>
+repo_root: <absolute path>
+worktree:
+  path: <absolute path>
+  branch: <branch name>
+primary_surface: shell | mixed | editor
+required_reads:
+  - AGENTS.md
+inputs:
+  - <handoff packet id or doc>
+deliverables:
+  - <output>
+verification:
+  commands:
+    - <exact command>
+  manual_proofs:
+    - <live behavior or URL check>
+green_level: targeted_green | lane_green | gate_green | release_green
+evidence_updates:
+  - <progress tracker path>
+  - <evidence log path>
+  - <decisions log path>
+  - <journal path>
+escalate_when:
+  - <condition>
+closeout_contract:
+  must_report:
+    - summary
+    - files changed
+    - checks run
+    - blocker status
+    - next exact starting point
+    - next handoff point

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend Stage 0 Production Line"
+  short_description: "Run Stage 0 with typed lanes"
+  default_prompt: "Use $backend-stage0-production-line to decompose Backend Wizards Stage 0 into typed packets, lane states, green levels, and closeout contracts."
